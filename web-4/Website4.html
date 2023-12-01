@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img1.jfif">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image:linear-gradient(rgba(0,0,0,0.3),transparent), url(background.png);
+            background-size: cover;
+            background-position: center;
+            padding: 0 8%;
+            position:relative;
+        }
+.nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.logo{
+    cursor: pointer;
+    width: 120px;
+}
+.cart{
+    cursor: pointer;
+    width: 40px;
+    transition: all linear 1s;
+   
+}
+
+.cart:hover{
+     width: 60px;
+     transition: all linear 1s;
+}
+
+.nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+
+}
+
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+.nav ul li a{
+    text-decoration: none;
+    color:white;
+    position: relative;
+}
+
+.nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    transform: translatex(50%);
+    background: white;
+    transition: all 0.3s linear;
+
+}
+
+.nav ul li a:hover::after{
+    width: 100%;
+    background:linear-gradient(red, yellow,blue);
+}
+
+.text-box{
+    color: white;
+    text-transform: uppercase;
+   
+    position: absolute;
+    bottom: 15%;
+}
+
+.text-box p{
+    font-size: 50px;
+    font-weight: 600;
+
+}
+.text-box h1{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background:url(back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+   
+   
+
+}
+@keyframes back  {
+    100%{
+        background-position:2000px  0;
+    }
+}
+
+
+
+.text-box h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.text-box .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+
+.text-box a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px ;
+    margin-right: 20px ;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+} 
+
+.text-box #arrow{
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 5px;
+   
+}
+
+.row span{
+    line-height: 30px;
+    font-weight: 100;
+}
+
+.social-icon{
+    position:absolute;
+    right: 5%;
+    bottom: 8%;
+}
+
+.social-icon img{
+    width: 30px;
+    display:block;
+    margin: 25px 5px;
+}
+
+#is1{
+    size: 10px;
+    transition: all 1s linear;
+}
+#is1:hover{
+ color:rgb(240, 13, 51);
+ 
+ transition: all 1s linear;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Portfolio</a></li>
+                
+            </ul>
+            <img src="cart.png" class="cart">
+        </div>
+
+        <div class="text-box">
+            <P id="is1">I'M</P>
+            <h1>Mayra</h1>
+            <h3>i help companies make a beautiful websites</h3>
+            <div class="row">
+                <a href="">Explore My Portfolio</a>
+                <a href="">Connect With Me <div id="arrow">&#x27F6;</div></a>
+                <span>you can Explore more about my Portfolio and<br> personal life experence here </span>
+            </div>
+           
+           
+        </div>
+
+        <div class="social-icon">
+            <a href=""><img src="dribble.png"></a>
+            <a href=""><img src="telegram.png"></a>
+            <a href=""><img src="instagram.png"></a>
+        </div>
+    </div>
+</body>
+</html>
